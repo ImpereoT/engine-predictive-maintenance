@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 from unittest.mock import MagicMock, patch
 
 
-# Мокаем predictor до импорта app, чтобы не требовать реальный .cbm файл
+# Мокаем predictor до импорта app
 @pytest.fixture
 def client():
     mock_predictor = MagicMock()

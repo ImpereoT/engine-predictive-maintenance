@@ -9,6 +9,6 @@ services:
     environment:
       - MODEL_PATH=models/engine_model.cbm
     volumes:
-      # Позволяет обновлять модель без пересборки образа
+    
       - ./models:/app/models:ro
     restart: unless-stopped

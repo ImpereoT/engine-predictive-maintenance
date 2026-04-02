@@ -51,8 +51,11 @@ class SensorData(BaseModel):
 
 class PredictionResponse(BaseModel):
     """Ответ модели."""
-    prediction: int = Field(..., description="0 — норма, 1 — риск поломки ≤30 циклов")
-    probability: float = Field(..., description="Вероятность поломки (класс 1)")
+    model_config = {"protected_namespaces": ()}
+    prediction: int = Field(...,
+                            description="0 — норма, 1 — риск поломки ≤30 циклов")
+    probability: float = Field(...,
+                               description="Вероятность поломки (класс 1)")
     status: str = Field(..., description="OK | WARNING")
     message: str = Field(..., description="Человекочитаемый вывод")
 
