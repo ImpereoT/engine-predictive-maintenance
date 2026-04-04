@@ -1,11 +1,11 @@
-# ✈️ Engine Predictive Maintenance
+#  Engine Predictive Maintenance
 
 ML-сервис предсказания отказа авиадвигателя по показаниям телеметрии.
 Модель обучена на датасете [NASA CMAPSS FD001](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository) и развёрнута как REST API с интерактивным дашбордом.
 
----
+![Dashboard](image.png)
 
-## 📌 Задача
+##  Задача
 
 Бинарная классификация: предсказать, откажет ли двигатель в течение следующих **30 рабочих циклов** на основе показаний 21 физического датчика (температура, давление, обороты) и 3 операционных параметров (высота, скорость, режим тяги).
 
@@ -13,7 +13,7 @@ ML-сервис предсказания отказа авиадвигателя
 
 ---
 
-## 🏗️ Структура проекта
+##  Структура проекта
 
 ```
 engine_predictive_maintenance/
@@ -43,7 +43,7 @@ engine_predictive_maintenance/
 
 ---
 
-## 🖥️ Интерфейс
+##  Интерфейс
 
 При открытии `http://localhost:8000` — тёмный интерактивный дашборд:
 
@@ -56,7 +56,7 @@ Swagger UI: `http://localhost:8000/docs`
 
 ---
 
-## 🚀 Быстрый старт
+##  Быстрый старт
 
 ### Требования
 - [Docker](https://www.docker.com/get-started) + Docker Compose
@@ -75,7 +75,7 @@ docker-compose up --build
 
 ---
 
-## 🔄 Переобучение модели
+##  Переобучение модели
 
 Если хочешь переобучить модель на своих данных:
 
@@ -88,7 +88,7 @@ docker-compose up --build
 
 ---
 
-## 🔌 API
+##  API
 
 ### `GET /health`
 ```json
@@ -122,7 +122,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 🧪 Тесты
+##  Тесты
 
 Тесты запускаются внутри Docker-контейнера:
 
@@ -136,7 +136,7 @@ docker exec engine_maintenance_api pytest tests/ -v
 
 ---
 
-## 🛠️ Стек
+##  Стек
 
 | Слой | Инструмент |
 |---|---|
