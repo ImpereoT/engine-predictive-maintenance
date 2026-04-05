@@ -1,7 +1,7 @@
 #  Engine Predictive Maintenance
 
 ML-сервис предсказания отказа авиадвигателя по показаниям телеметрии.
-Модель обучена на датасете [NASA CMAPSS FD001](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository) и развёрнута как REST API с интерактивным дашбордом.
+Модель обучена на датасете [NASA CMAPSS FD001](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository) и развёрнута как REST API с интерактивным дашбордом, CI GitHub Actions.
 
 ![Dashboard](image.png)
 
