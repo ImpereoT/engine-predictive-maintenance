@@ -1,0 +1,29 @@
+name: CI — Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t engine-maintenance-api .
+
+      - name: Run container
+        run: docker run -d -p 8000:8000 --name test-api engine-maintenance-api
+
+      - name: Wait for API
+        run: sleep 15
+
+      - name: Test health endpoint
+        run: |
+          curl -f http://localhost:8000/health || exit 1
+          echo "API is healthy!"
