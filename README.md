@@ -76,7 +76,7 @@ Swagger UI: `http://localhost:8000/docs`
 ### Запуск
 
 ```bash
-git clone https://github.com/ImpereoT/engine-predictive-maintenance
+git clone https://github.com/IlliaSator/engine-predictive-maintenance
 cd engine-predictive-maintenance
 docker-compose up --build
 ```
